@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Weather Forecast</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/css/style.css'>
+    <!-- <script src='main.js'></script> -->
+</head>
+<body>
+    <body class="flex-column min-100-vh">
+        <header class="hero">
+          <h1 class="app-title"> 5 Day Weather Focast </h1>
+        </header>
+      
+        <main class="flex-row justify-space-between">
+          <div class="col-12 col-md-4">
+      
+            <div class="card" style="width: 20rem;">
+              <h3 class="card-header text-uppercase">Search By City</h3>
+              <form id="cityName" class="card-body">
+                <label class="form-label" for="username">City Name</label>
+                <input name="username" id="username" type="text" autofocus="true" class="form-input" />
+                <button id = "btnSearch" type="submit" class="btn">Search</button>
+              </form>
+            </div>
+      
+            <div class="card"style="width: 20rem;">
+              <h3 class="card-header text-uppercase">Recent Searched Cities</h3>
+              <div id="recnSearch" class="card-body">
+                <button data-language="recnCity1" class="btn">City 1</button>
+                <button data-language="recnCity2" class="btn">City 2</button>
+                <button data-language="recnCity3" class="btn">City 3</button>
+                <button data-language="recnCity4" class="btn">City 4</button>
+                <button data-language="recnCity5" class="btn">City 5</button>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-8">
+            <h2 class="subtitle">Today's Forecast: </h2>
+          <div class="card" >
+            <h2> City Name:<span id = "cityNameBmx"> </span> <label> Date: <span id = "dateBmx"> </span> </label> </h2> 
+            <label> Temp: <span id = "tempBxm"> </span></label>
+            <label> Wind: <span id = "windBxm"> </span></label>
+            <label> Humidity: <span id = "humidBxm"> </span></label>
+           </div>
+
+
+            <h2 class="subtitle">Next 5 day Forecast: </h2>
+
+            <div class="flex-row ">
+                <div class="card" style="width: 16rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <label> Temp: <span id = "tempBx1"> </span></label>
+                        <label> Wind: <span id = "windBx1"> </span></label>
+                        <label> Humidity: <span id = "humidBx1"> </span></label>
+                    </div>
+                </div>
+
+              <div class="card" style="width: 16rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body" >
+                        <label> Temp: <span id = "tempBx2"> </span></label>
+                        <label> Wind: <span id = "windBx2"> </span></label>
+                        <label> Humidity: <span id = "humidBx2"> </span></label>
+                    </div>
+              </div>
+
+              <div class="card" style="width: 16rem;" >
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <label> Temp: <span id = "tempBx3"> </span></label>
+                        <label> Wind: <span id = "windBx3"> </span></label>
+                        <label> Humidity: <span id = "humidBx3"> </span></label>
+                    </div>
+              </div>
+
+              <div class="card" style="width: 16rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <label> Temp: <span id = "tempBx4"> </span></label>
+                        <label> Wind: <span id = "windBx4"> </span></label>
+                        <label> Humidity: <span id = "humidBx4"> </span></label>
+                    </div>
+              </div>
+
+              <div class="card" style="width: 16rem;">
+                 <img src="..." class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <label> Temp: <span id = "tempBx5"> </span></label>
+                    <label> Wind: <span id = "windBx5"> </span></label>
+                    <label> Humidity: <span id = "humidBx5"> </span></label>
+                 </div>
+              </div>
+
+            </div>
+            
+          </div>
+        </main>
+      
+    <script src='assets/script/script.js'></script>
+</body>
+</html>
