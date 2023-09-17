@@ -35,6 +35,40 @@ var day5Humid = document.querySelector("#humidBx5");
 
 
 
+document.getElementById("btnSearch").addEventListener("click", function() {
+  var inputValue = document.getElementById("cityName").value;
+  console.log(inputValue);
+});
+
+
+// cityBtn.addEventListener("click", loaddata);
+
+
+// function loaddata () {
+
+// // event.preventDefault();
+
+// var city = document.getElementById("#cityName").value
+// console.log (city);
+
+// }
+
+
+//  cityBtn.addEventListener("click", loaddata);
+
+// function buttonClick (event) {
+
+//   // event.preventDefault();
+
+//   // var city = document.getElementById("cityName");
+//   console.log ("click");
+  
+// }
+
+
+// cityName.addEventListener('submit', loaddata)
+// cityBtn.addEventListener("click", loaddata);
+
 
 // var a 
 // console.log("TEST") 
