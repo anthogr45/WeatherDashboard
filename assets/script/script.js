@@ -33,13 +33,70 @@ var day5Wind = document.querySelector("#windBx5");
 var day5Humid = document.querySelector("#humidBx5");
 
 
+// console.log()
 
+var url = '';
+var dataUrl = '';
+var filter;
+var lat; 
+var lon;
+var temp;
 
 document.getElementById("btnSearch").addEventListener("click", function() {
-  var inputValue = document.getElementById("cityName").value;
-  console.log(inputValue);
+  cityName = document.getElementById("cityName").value;
+
+  url = 'http://api.openweathermap.org/geo/1.0/direct?q='+cityName+'&limit=5&appid=8f85de3f09fd660e685a8dc902867d7f'
+  console.log(url);
+  fetchcity(url)
 });
 
+
+function fetchcity (cityurl) {
+
+  fetch(cityurl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      filter = data[0];
+      // const obj = JSON.parse(data);
+      // console.log("lat"+filter.lat);
+      // console.log("lon"+filter.lon);
+
+      lat = filter.lat;
+      lon = filter.lon;
+      console.log("lat"+lat);
+      console.log("lon"+lon);
+      fetchData (lat, lon);
+    });
+
+    // dataUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+lon+'&appid=8f85de3f09fd660e685a8dc902867d7f';
+    
+    // console.log(dataUrl);
+}
+
+function fetchData (lat, lon) {
+
+  dataUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+lon+'&appid=8f85de3f09fd660e685a8dc902867d7f';
+   
+  
+
+fetch(dataUrl)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+     console.log(data);
+     temp = data;
+
+    var filter1 = temp.list.main
+
+     console.log(filter1);
+  });
+
+  // console.log(dataUrl);
+
+}
 
 // cityBtn.addEventListener("click", loaddata);
 
