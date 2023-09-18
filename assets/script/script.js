@@ -40,7 +40,10 @@ var dataUrl = '';
 var filter;
 var lat; 
 var lon;
-var temp;
+var curretnDayTemp;
+var curretnDayHumid;
+var curretnDayWind;
+
 
 document.getElementById("btnSearch").addEventListener("click", function() {
   cityName = document.getElementById("cityName").value;
@@ -86,74 +89,46 @@ fetch(dataUrl)
     return response.json();
   })
   .then(function (data) {
-     console.log(data);
-     temp = data;
+    console.log(data);
+    const tempdata = data.list
+    // console.log(tempdata);
+    // console.log(tempdata[1].wind);
 
-    var filter1 = temp.list.main
+    // const today = new Date();
+    // console.log(today);
 
-     console.log(filter1);
+    todaysdata(tempdata);
+
+     
   });
-
-  // console.log(dataUrl);
 
 }
 
-// cityBtn.addEventListener("click", loaddata);
+function todaysdata (array) {
+
+  const temparray = array;
+
+  // console.log(temparray);
+
+  const todaystemp = temparray[0].main.temp;
+  const value = (todaystemp - 273.15)
+  curretnDayTemp = value.toFixed(2);
+  console.log(curretnDayTemp);
+  mboxTemp.textContent = curretnDayTemp;
 
 
-// function loaddata () {
+  curretnDayHumid = temparray[0].main.humidity;
+  console.log(curretnDayHumid);
+  mboxHumid.textContent = curretnDayHumid;
 
-// // event.preventDefault();
+  curretnDayWind = temparray[0].wind.speed;
+  console.log(curretnDayWind);
+  mboxWind.textContent = curretnDayWind;
 
-// var city = document.getElementById("#cityName").value
-// console.log (city);
-
-// }
+}
 
 
-//  cityBtn.addEventListener("click", loaddata);
+function fivedaysdata (array) {
 
-// function buttonClick (event) {
-
-//   // event.preventDefault();
-
-//   // var city = document.getElementById("cityName");
-//   console.log ("click");
   
-// }
-
-
-// cityName.addEventListener('submit', loaddata)
-// cityBtn.addEventListener("click", loaddata);
-
-
-// var a 
-// console.log("TEST") 
-// // cityBtn.addEventListener("click", loaddata)
-
-
-
-
-//  function loaddata () {
-//   // var getvalue = function (event) {
-//   a = "lcmsmc"
-//     // preventDefault();  
-//     // var datatxt = cityName.value(); 
-//     console.log("TEST") 
-    
-// // console.log(a)
-
-// }
-
-// cityBtn.addEventListener("click", loaddata);
-
-// function () {
-    // var getvalue = function (event) {
-
-      // preventDefault();  
-      // var datatxt = cityName.value(); 
-      //console.log("TEST") 
-      
-  // console.log(a)
-  
-//   });
+}
