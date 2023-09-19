@@ -33,7 +33,12 @@ var day5Wind = document.querySelector("#windBx5");
 var day5Humid = document.querySelector("#humidBx5");
 
 
-// console.log()
+
+
+var today = dayjs().format('YYYY, MM DD, hh:mm:ss');
+var todaysDate = dayjs().format('DD/MM/YYYY');
+
+console.log(today)
 
 var url = '';
 var dataUrl = '';
@@ -98,7 +103,6 @@ fetch(dataUrl)
     // console.log(today);
 
     todaysdata(tempdata);
-
      
   });
 
@@ -125,10 +129,72 @@ function todaysdata (array) {
   console.log(curretnDayWind);
   mboxWind.textContent = curretnDayWind;
 
+  fivedaysdata(temparray);
+
 }
 
+  var nextDaysArray = [];
+  var splitDate
+  var filteredArray = [];
+  var atThree = '15:00:00';
 
 function fivedaysdata (array) {
 
+  const workingArray = array;
+  const today = new Date();
+  const day1 = today.setDate(today.getDate() +1);
+  console.log(today);
+  console.log(day1);
+
   
+  // const tempDate = workingArray[0].dt_txt;
+  // splitDate = tempDate.split(" ")[0];
+
+  // console.log(splitDate);
+  // const x = workingArray.length;
+  // console.log(x);
+
+  const tempDate = workingArray[0].dt_txt;
+  splitDate = tempDate.split(" ")[0];
+
+  for(var i=0; i < workingArray.length; i++) {
+
+    const tempDateNew = workingArray[i].dt_txt;
+    var checkDate = tempDateNew.split(" ")[0];
+   
+    if (checkDate > splitDate) {
+   
+    // if (workingArray[i].dt_txt > splitDate) {
+
+      nextDaysArray.push(workingArray[i])
+
+    }
+    
+  }
+  fivedayThree (nextDaysArray)
+
+  // console.log(nextDaysArray);
+}
+
+var spliTimeArray = [];
+
+function fivedayThree (array) {
+
+var threeArray = array;
+var splitTime;
+
+for (var x=0; x< threeArray.length; x++) {
+
+  splitTime = (threeArray[x].dt_txt).split(" ")[1]
+
+  if (splitTime === "06:00:00") {
+
+    spliTimeArray.push(threeArray[x]);
+
+  }
+
+}
+
+console.log(spliTimeArray);
+
 }
