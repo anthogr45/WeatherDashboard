@@ -10,7 +10,7 @@
 </head>
 <body>
     <body class="flex-column min-100-vh">
-        <header class="hero">
+        <header class="headerw ">
           <h1 class="app-title"> 5 Day Weather Focast </h1>
         </header>
       
@@ -31,70 +31,78 @@
             <div class="card"style="width: 20rem;">
               <h3 class="card-header text-uppercase">Recent Searched Cities</h3>
               <div id="recnSearch" class="card-body">
-                <button data-language="recnCity1" class="btn">City 1</button>
-                <button data-language="recnCity2" class="btn">City 2</button>
-                <button data-language="recnCity3" class="btn">City 3</button>
-                <button data-language="recnCity4" class="btn">City 4</button>
-                <button data-language="recnCity5" class="btn">City 5</button>
+                <button  data-language="recnCity1"  class ="srhchbtn" disabled>City 1</button>
+                <button  data-language="recnCity2"  class="srhchbtn" disabled >City 2</button>
+                <button  data-language="recnCity3"  class="srhchbtn" disabled >City 3</button>
+                <button  data-language="recnCity4"  class="srhchbtn" disabled >City 4</button>
+                <button  data-language="recnCity5"  class="srhchbtn" disabled >City 5</button>
+                <!-- <button class = "srhchbtn"> Colombo</button> -->
               </div>
             </div>
           </div>
       
-          <div class="col-12 col-md-8">
+          <div class="col-12 col-md-8"> 
             <h2 class="subtitle">Today's Forecast: </h2>
           <div class="card" >
-            <h2> City Name:<span id = "cityNameBmx"> </span> <label> Date: <span id = "dateBmx"> </span> </label> </h2> 
-            <label> Temp: <span id = "tempBxm"> </span>°C</label>
-            <label> Wind: <span id = "windBxm"> </span>MPH</label>
-            <label> Humidity: <span id = "humidBxm"> </span>%</label>
+            <img src="..." class="mcard-img-top" alt="...">
+            <h2> City Name:<span id = "cityNameBmx"> </span> <label> Date: <span id = "dateBmx"> </span> </label>   </h2> 
+            <label> <b>Temp:</b> <span id = "tempBxm"> </span>°C</label>
+            <label> <b>Wind:</b> <span id = "windBxm"> </span>MPH</label>
+            <label><b> Humidity:</b> <span id = "humidBxm"> </span>% </label>
+            
            </div>
 
 
-            <h2 class="subtitle">Next 5 day Forecast: </h2>
+            <h2 class="subtitle">5 day Forecast @ 12noon: </h2>
 
             <div class="flex-row ">
                 <div class="card" style="width: 16rem;">
+                    <label> Date: <span class = "Bxdate"> </span></label>
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
-                        <label> Temp: <span id = "tempBx1"> </span>°C</label>
-                        <label> Wind: <span id = "windBx1"> </span></label>
-                        <label> Humidity: <span id = "humidBx1"> </span></label>
+                      <label> <b>Temp:</b> <span class = "tempBx"> </span>°C</label>
+                      <label> <b>Wind:</b> <span class = "windBx"> </span>MPH</label>
+                      <label><b> Humidity:</b> <span class = "humidBx"> </span>% </label>
                     </div>
                 </div>
 
               <div class="card" style="width: 16rem;">
+                    <label> Date: <span class = "Bxdate"> </span></label>
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body" >
-                        <label> Temp: <span id = "tempBx2"> </span></label>
-                        <label> Wind: <span id = "windBx2"> </span></label>
-                        <label> Humidity: <span id = "humidBx2"> </span></label>
+                        <label> <b>Temp:</b> <span class = "tempBx"> </span>°C</label>
+                        <label><b>Wind:</b>  <span class = "windBx"> </span>MPH</label>
+                        <label><b>Humidity:</b>  <span class = "humidBx"> </span>%</label>
                     </div>
               </div>
 
               <div class="card" style="width: 16rem;" >
+                    <label> Date: <span class = "Bxdate"> </span></label>
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
-                        <label> Temp: <span id = "tempBx3"> </span></label>
-                        <label> Wind: <span id = "windBx3"> </span></label>
-                        <label> Humidity: <span id = "humidBx3"> </span></label>
+                        <label><b>Temp:</b>  <span class = "tempBx"> </span>°C</label>
+                        <label> <b>Wind:</b> <span class = "windBx"> </span>MPH</label>
+                        <label><b>Humidity:</b>  <span class = "humidBx"> </span>%</label>
                     </div>
               </div>
 
               <div class="card" style="width: 16rem;">
+                    <label> Date: <span class = "Bxdate"> </span></label>
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
-                        <label> Temp: <span id = "tempBx4"> </span></label>
-                        <label> Wind: <span id = "windBx4"> </span></label>
-                        <label> Humidity: <span id = "humidBx4"> </span></label>
+                        <label> <b>Temp:</b> <span class = "tempBx"> </span>°C</label>
+                        <label><b>Wind:</b>  <span class = "windBx"> </span>MPH</label>
+                        <label> <b>Humidity:</b> <span class = "humidBx"> </span>%</label>
                     </div>
               </div>
 
               <div class="card" style="width: 16rem;">
+                 <label> Date: <span class = "Bxdate"> </span></label>
                  <img src="..." class="card-img-top" alt="...">
                  <div class="card-body">
-                    <label> Temp: <span id = "tempBx5"> </span></label>
-                    <label> Wind: <span id = "windBx5"> </span></label>
-                    <label> Humidity: <span id = "humidBx5"> </span></label>
+                    <label><b> Temp:</b> <span class = "tempBx"> </span>°C</label>
+                    <label><b>Wind:</b>  <span class = "windBx"> </span>MPH</label>
+                    <label><b>Humidity:</b>  <span class = "humidBx"> </span>%</label>
                  </div>
               </div>
 

@@ -1,9 +1,9 @@
 :root {
-    --primary: #ccdad1;
-    --secondary: #9caea9;
-    --tertiary: #788585;
+    --primary: #a6dad5;
+    --secondary: #84dac1;
+    --tertiary: #438f8f;
     --light-dark: #6f6866;
-    --dark: #38302e;
+    --dark: #131111;
     --border-radius: 0.3rem;
   }
   
@@ -42,6 +42,36 @@
     font-size: 1.2rem;
   }
   
+  .Searchbtn {
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 6px 5px;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    border-radius: var(--border-radius);
+    color: var(--primary);
+    border: none;
+    outline: none;
+    background-color: var(--light-dark);
+    /* box-shadow: 3px 3px var(--dark); */
+    /* transform: translate(-1px, -1px); */
+  }
+
+  .srhchbtn{
+
+    font-size: 1.3rem;
+    text-decoration: none;
+   padding: 6px 5px;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    color: #6f6866;
+    background-color:#eee8e7
+    translate(-1px, -1px);
+    
+  }
+
   .btn {
     font-size: 1.3rem;
     text-decoration: none;
@@ -92,7 +122,7 @@
     box-shadow: 2px 2px var(--dark);
   }
   
-  .hero {
+  .headerw {
     padding: 3% 4%;
     background-color: var(--dark);
     color: var(--primary);
@@ -170,10 +200,7 @@
     display: block;
   }
   
-  .form-label {
-    font-size: 1.1rem;
-    margin: 0 0 0 5px;
-  }
+
   
   .form-input {
     width: 100%;
