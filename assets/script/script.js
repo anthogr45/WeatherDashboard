@@ -75,7 +75,7 @@ function cityurlGenerator (cname) {
 
   var srchcityName = cname;  
   mboxCityName.textContent = cname;
-  var srcurl = 'http://api.openweathermap.org/geo/1.0/direct?q='+srchcityName+'&limit=5&appid=799d82f5c4c82842092915991a76091c'
+  var srcurl = 'https://api.openweathermap.org/geo/1.0/direct?q='+srchcityName+'&limit=5&appid=799d82f5c4c82842092915991a76091c'
     
   fetchcity(srcurl)
 }
