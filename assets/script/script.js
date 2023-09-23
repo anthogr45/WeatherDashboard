@@ -43,7 +43,7 @@ var filteredArray = [];
  document.getElementById("btnSearch").addEventListener("click", function() {
     cityName = document.getElementById("cityName").value;
     mboxCityName.textContent = cityName;
-    url = 'http://api.openweathermap.org/geo/1.0/direct?q='+cityName+'&limit=5&appid=8f85de3f09fd660e685a8dc902867d7f'
+    url = 'https://api.openweathermap.org/geo/1.0/direct?q='+cityName+'&limit=5&appid=8f85de3f09fd660e685a8dc902867d7f'
     
     var currentdate = new Date();   
     localStorage.setItem (currentdate, cityName);   
