@@ -6,7 +6,7 @@
     <title>Weather Forecast</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/style.css'>
-    <!-- <script src='main.js'></script> -->
+
 </head>
 <body>
     <body class="flex-column min-100-vh">
@@ -19,31 +19,28 @@
       
             <div class="card" style="width: 20rem;">
               <h3 class="card-header text-uppercase">Search By City</h3>
-              <!-- <form  class="card-body"> -->
                 <label class="form-label" ><b>City Name</b> </label>
-                <input id="cityName" class="form-input"/> 
-
-                <!-- <input id="cityName"  type="text" autofocus="true" class="form-input" /> -->
+                <input id="cityName" class="form-input"/>                
                 <button id = "btnSearch" type="submit" class="btn">Search</button>
               </form>
             </div>
-      
+      <!-- Buttons for the most recent 5 searchers -->
             <div class="card"style="width: 20rem;">
               <h3 class="card-header text-uppercase">Recent Searched Cities</h3>
               <div id="recnSearch" class="card-body">
                 <button  data-language="recnCity1"  class ="srhchbtn" disabled>City 1</button>
                 <button  data-language="recnCity2"  class="srhchbtn" disabled >City 2</button>
                 <button  data-language="recnCity3"  class="srhchbtn" disabled >City 3</button>
-                <button  data-language="recnCity4"  class="srhchbtn" disabled >City 4</button>
+                <button  data-language="recnCity4"  class="srhchbtn" disabled >City 4</button>   
                 <button  data-language="recnCity5"  class="srhchbtn" disabled >City 5</button>
-                <!-- <button class = "srhchbtn"> Colombo</button> -->
+                
               </div>
             </div>
           </div>
-      
+      <!-- Today Forecast Details -->
           <div class="col-12 col-md-8"> 
             <h2 class="subtitle">Today's Forecast: </h2>
-          <div class="card" >
+          <div class="maincard" >
             <img src="..." class="mcard-img-top" alt="...">
             <h2> City Name:<span id = "cityNameBmx"> </span> <label> Date: <span id = "dateBmx"> </span> </label>   </h2> 
             <label> <b>Temp:</b> <span id = "tempBxm"> </span>°C</label>
@@ -54,52 +51,55 @@
 
 
             <h2 class="subtitle">5 day Forecast @ 12noon: </h2>
-
+      <!-- 5 day Forecast @ 12noon  -->
             <div class="flex-row ">
-                <div class="card" style="width: 16rem;">
-                    <label> Date: <span class = "Bxdate"> </span></label>
+                <div class="card" style="width: 18rem;">
+                    
                     <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" class = "scard">
+                      <label> <b>Date:</b> <span class = "Bxdate"> </span></label>
                       <label> <b>Temp:</b> <span class = "tempBx"> </span>°C</label>
                       <label> <b>Wind:</b> <span class = "windBx"> </span>MPH</label>
                       <label><b> Humidity:</b> <span class = "humidBx"> </span>% </label>
                     </div>
                 </div>
 
-              <div class="card" style="width: 16rem;">
-                    <label> Date: <span class = "Bxdate"> </span></label>
+              <div class="card" style="width: 18rem;">
+                    
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body" >
+                        <label> <b>Date:</b> <span class = "Bxdate"> </span></label>
                         <label> <b>Temp:</b> <span class = "tempBx"> </span>°C</label>
                         <label><b>Wind:</b>  <span class = "windBx"> </span>MPH</label>
                         <label><b>Humidity:</b>  <span class = "humidBx"> </span>%</label>
                     </div>
               </div>
 
-              <div class="card" style="width: 16rem;" >
-                    <label> Date: <span class = "Bxdate"> </span></label>
+              <div class="card" style="width: 18rem;" >
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
+                      <label> <b>Date:</b> <span class = "Bxdate"> </span></label>
                         <label><b>Temp:</b>  <span class = "tempBx"> </span>°C</label>
                         <label> <b>Wind:</b> <span class = "windBx"> </span>MPH</label>
                         <label><b>Humidity:</b>  <span class = "humidBx"> </span>%</label>
                     </div>
               </div>
 
-              <div class="card" style="width: 16rem;">
-                    <label> Date: <span class = "Bxdate"> </span></label>
+              <div class="card" style="width: 18rem;">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
+                        <label> <b>Date:</b> <span class = "Bxdate"> </span></label>
                         <label> <b>Temp:</b> <span class = "tempBx"> </span>°C</label>
                         <label><b>Wind:</b>  <span class = "windBx"> </span>MPH</label>
                         <label> <b>Humidity:</b> <span class = "humidBx"> </span>%</label>
                     </div>
               </div>
 
-              <div class="card" style="width: 16rem;">
-                 <label> Date: <span class = "Bxdate"> </span></label>
+              <div class="card" style="width: 18rem;">
+                 
                  <img src="..." class="card-img-top" alt="...">
                  <div class="card-body">
+                    <label> <b>Date:</b> <span class = "Bxdate"> </span></label>
                     <label><b> Temp:</b> <span class = "tempBx"> </span>°C</label>
                     <label><b>Wind:</b>  <span class = "windBx"> </span>MPH</label>
                     <label><b>Humidity:</b>  <span class = "humidBx"> </span>%</label>
@@ -110,7 +110,7 @@
             
           </div>
         </main>
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous" ></script>
+       
     <script src='assets/script/script.js'></script>
 </body>
 </html>

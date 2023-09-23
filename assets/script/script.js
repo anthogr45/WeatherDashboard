@@ -3,7 +3,7 @@
 var cityName = document.querySelector("#cityName");
 var cityBtn = document.querySelector("#btnSearch");
 
-// var mboxCityName = document.querySelector("#cityNameBmx");
+
 var mboxTemp = document.querySelector("#tempBxm");
 var mboxWind = document.querySelector("#windBxm");
 var mboxHumid = document.querySelector("#humidBxm");
@@ -37,46 +37,33 @@ var nextDaysArray = [];
 var splitDate
 var filteredArray = [];
 
-  // location.reload();
+ 
 
-//Main Search Button Event
+//Search by City Button Event
  document.getElementById("btnSearch").addEventListener("click", function() {
     cityName = document.getElementById("cityName").value;
     mboxCityName.textContent = cityName;
     url = 'http://api.openweathermap.org/geo/1.0/direct?q='+cityName+'&limit=5&appid=8f85de3f09fd660e685a8dc902867d7f'
     
-    var currentdate = new Date();
-    
-    // var storeCity = [currentdate, cityName]
-    
-    localStorage.setItem (currentdate, cityName);
-    // getbtnName = localStorage.setItem('Cityname', JSON.stringify(storeCity));
-
-    var check = dayTemp.val;
-    console.log(check);
-
-    spliTimeArray.length =0;
+    var currentdate = new Date();   
+    localStorage.setItem (currentdate, cityName);   
+     // var check = dayTemp.val;
+    spliTimeArray.length =0; //Clear the arrays
     nextDaysArray.length =0;
-
-    // clearData ();
 
     fetchcity(url)
   });
  
-function clearData (url) {
+function clearData (url) { //Clear the 5 day Forecast data
 
   var furl = url;
     for(var z = 0; z < 5; z++){
       
       image1[z].removeAttribute('src');
-      // console.log(nurl)
-  
-     
+           
       dayTemp[z].innerHTML = "";
       dayWind[z].innerHTML = "";
-      dayHumid[z].innerHTML =  "";
-  
-        
+      dayHumid[z].innerHTML =  "";        
       boxDate[z].innerHTML = "";
     }
 
@@ -86,13 +73,10 @@ function clearData (url) {
 //This function will generate the Finitial url with the CIty to get the Lat and Lot
 function cityurlGenerator (cname) {
 
-  var srchcityName = cname;
-  // console.log(cname);
-  // cityName.innerHTML = "";
+  var srchcityName = cname;  
   mboxCityName.textContent = cname;
   var srcurl = 'http://api.openweathermap.org/geo/1.0/direct?q='+srchcityName+'&limit=5&appid=799d82f5c4c82842092915991a76091c'
-  
-  // clearData (srcurl)
+    
   fetchcity(srcurl)
 }
 
@@ -107,7 +91,7 @@ function fetchcity (cityurl) { //This Function will get the Lat and Lon
       filter = data[0];
       lat = filter.lat;
       lon = filter.lon;
-      // localStorage.setItem (lat, cityName);
+      
       fetchData (lat, lon);
     });
 
@@ -152,18 +136,15 @@ function todaysdata (array) { //Function will display the values of the Todays F
   const todaystemp = temparray[0].main.temp;
   const value = (todaystemp - 273.15)
   curretnDayTemp = value.toFixed(2);
-  // console.log(curretnDayTemp);
   mboxTemp.textContent = curretnDayTemp;
 
-
   curretnDayHumid = temparray[0].main.humidity;
-  // console.log(curretnDayHumid);
+  
   mboxHumid.textContent = curretnDayHumid;
 
   curretnDayWind = temparray[0].wind.speed;
-  // console.log(curretnDayWind);
+ 
   mboxWind.textContent = curretnDayWind;
-
   
 
 }
@@ -196,7 +177,6 @@ function fivedaysdata (array) {  // This function will split the date and time o
 
 }
 
-// var spliTimeArray = [];
 
 function fivedayThree (array) {  //This function will filter and get an array of the 5 day forecast for 3pm 
  
@@ -216,7 +196,7 @@ function fivedayThree (array) {  //This function will filter and get an array of
     }
 
 }
-console.log(spliTimeArray);
+  console.log(spliTimeArray);
 
   fill5daydata (spliTimeArray);
 
@@ -281,9 +261,7 @@ function fill5daydata (array) { // This function will get and display the values
 
     searchHistory()
   }
-
-  // spliTimeArray =[];
- 
+   
 }
 
 
@@ -295,10 +273,8 @@ function searchHistory() { //This Function will generate the 5 buttons for the m
       const key = localStorage.key(i);
         const value = localStorage.getItem(key);
         searchCity.push(value)
-        // searchCity.push(value);
-        
+               
       if(key !== null) {
-        // searchCity.push(value);
         searchBtn[i].disabled = false;
         searchBtn[i].innerHTML =searchCity[i] ;
       }else if(key === null) {
